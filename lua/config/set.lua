@@ -32,11 +32,13 @@ set.colorcolumn = "80"
 
 set.autoread = true
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
-  pattern = { "*" },
-  callback = function()
-    if vim.api.nvim_get_mode().mode ~= 'c' then -- Check if not in command mode
-      vim.cmd("checktime")
-    end
-  end,
-  desc = "Automatically check and reload file changes on disk"
+    pattern = { "*" },
+    callback = function()
+        if vim.api.nvim_get_mode().mode ~= 'c' then -- Check if not in command mode
+            vim.cmd("checktime")
+        end
+    end,
+    desc = "Automatically check and reload file changes on disk"
 })
+
+vim.g.netrw_banner = 0
