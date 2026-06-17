@@ -28,14 +28,15 @@ remap("n", "<leader>Y", [["+Y]])
 remap({ "n", "v" }, "<leader>d", [["_d]])
 
 -- lsp buffer format
-remap("n", "<leader>f", vim.lsp.buf.format)
-
+remap("n", "<leader>f", function()
+    vim.lsp.buf.format({ async = true })
+end)
 -- screen splitting in vim
 remap("n", "<leader>|", "<cmd>vsplit<CR>");
 remap("n", "<leader>-", "<cmd>split<CR>");
 
 --navigating windows Alt + hjkl to move between splits
-remap("n", "<M-h>", "<C-w>h") 
+remap("n", "<M-h>", "<C-w>h")
 remap("n", "<M-j>", "<C-w>j")
 remap("n", "<M-k>", "<C-w>k")
 remap("n", "<M-l>", "<C-w>l")

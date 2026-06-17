@@ -4,6 +4,7 @@ vim.lsp.config("*", {
 
 require("lsp.lua_ls")
 require("lsp.clangd")
+require("lsp.web")
 
 vim.diagnostic.config({
     virtual_text = {

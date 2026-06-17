@@ -5,5 +5,6 @@ return {
     priority = 1000,
     config = function()
         vim.cmd.colorscheme("neobones")
+        vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
     end,
 }
