@@ -1,6 +1,24 @@
-vim.lsp.config("*", {
-    capabilities = require("blink.cmp").get_lsp_capabilities(),
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+capabilities = vim.tbl_deep_extend(
+    'force',
+    capabilities,
+    require('blink.cmp').get_lsp_capabilities({}, false)
+)
+
+capabilities = vim.tbl_deep_extend('force', capabilities, {
+    textDocument = {
+        foldingRange = {
+            dynamicRegistration = false,
+            lineFoldingOnly = true
+        }
+    }
 })
+
+vim.lsp.ocnfig("*", {
+    capabilities - capabilities,
+})
+
 
 require("lsp.lua_ls")
 require("lsp.clangd")

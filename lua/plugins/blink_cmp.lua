@@ -5,6 +5,7 @@ return {
         -- optional: provides snippets for the snippet source
         'rafamadriz/friendly-snippets',
     },
+    version = "1.*",
     build = function()
         -- build the fuzzy matcher, optionally add a timeout to `pwait(timeout_ms)`
         -- you can use `gb` in `:Lazy` to rebuild the plugin as needed
@@ -13,6 +14,7 @@ return {
 
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
+    ---
     opts = {
         -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
         -- 'super-tab' for mappings similar to vscode (tab to accept)
