@@ -24,6 +24,7 @@ require("lsp.lua_ls")
 require("lsp.clangd")
 require("lsp.web")
 require("lsp.marks_man")
+require("lsp.kotlin_ls")
 
 vim.diagnostic.config({
     virtual_text = {
