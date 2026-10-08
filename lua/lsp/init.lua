@@ -23,6 +23,7 @@ vim.lsp.config("*", {
 require("lsp.lua_ls")
 require("lsp.clangd")
 require("lsp.web")
+require("lsp.marks_man")
 
 vim.diagnostic.config({
     virtual_text = {

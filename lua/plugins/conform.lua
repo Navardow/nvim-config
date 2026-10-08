@@ -28,6 +28,7 @@ return {
             less       = { "prettierd", "prettier", stop_after_first = true },
             c          = { "clang-format" },
             cpp        = { "clang-format" },
+            markdown   = { "prettier" }
         },
         -- Set default options
         default_format_opts = {
