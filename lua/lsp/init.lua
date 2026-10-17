@@ -25,6 +25,7 @@ require("lsp.clangd")
 require("lsp.web")
 require("lsp.marks_man")
 require("lsp.kotlin_ls")
+require("lsp.basedpyright")
 
 vim.diagnostic.config({
     virtual_text = {

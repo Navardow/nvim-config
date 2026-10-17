@@ -20,7 +20,6 @@ return {
         -- Define your formatters
         formatters_by_ft = {
             lua        = { "stylua" },
-            python     = { "isort", "black" },
             javascript = { "prettierd", "prettier", stop_after_first = true },
             typescript = { "prettierd", "prettier", stop_after_first = true },
             css        = { "prettierd", "prettier", stop_after_first = true },
@@ -28,7 +27,8 @@ return {
             less       = { "prettierd", "prettier", stop_after_first = true },
             c          = { "clang-format" },
             cpp        = { "clang-format" },
-            markdown   = { "prettier" }
+            markdown   = { "prettier" },
+            python     = { "ruff_fix", "ruff_format" }
         },
         -- Set default options
         default_format_opts = {
