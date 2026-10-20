@@ -25,12 +25,8 @@ remap({ "n", "v" }, "<leader>y", [["+y]])
 remap("n", "<leader>Y", [["+Y]])
 
 -- deletes without copying to buffer, dont affect clipboard
-remap({ "n", "v" }, "<leader>d", [["_d]])
+remap({ "n", "v" }, "<leader>D", [["_d]])
 
--- lsp buffer format
-remap("n", "<leader>f", function()
-    vim.lsp.buf.format({ async = true })
-end)
 -- screen splitting in vim
 remap("n", "<leader>|", "<cmd>vsplit<CR>");
 remap("n", "<leader>-", "<cmd>split<CR>");

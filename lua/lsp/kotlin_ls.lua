@@ -1,6 +1,6 @@
-vim.lsp.config("kotln_lsp", {
+vim.lsp.config("kotlin_lsp", {
     cmd = { "kotlin-lsp", "--stdio" },
-    filetype = { "kotlin" },
+    filetypes = { "kotlin" },
     root_markers = { 'build.gradle', 'build.gradle.kts', 'settings.gradle', 'pom.xml', '.git' },
     workspace_required = false,
 });
