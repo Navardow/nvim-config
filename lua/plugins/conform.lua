@@ -41,6 +41,13 @@ return {
             shfmt = {
                 append_args = { "-i", "2" },
             },
+            -- 4-space indent unless the project has its own prettier config
+            prettierd = {
+                env = { PRETTIERD_DEFAULT_CONFIG = vim.fn.stdpath("config") .. "/.prettierrc.json" },
+            },
+            prettier = {
+                prepend_args = { "--tab-width", "4", "--config-precedence", "prefer-file" },
+            },
         },
     },
     init = function()
